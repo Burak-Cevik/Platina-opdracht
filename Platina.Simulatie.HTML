@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Route</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .header {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            background: #fff;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .sidebar li.active {
+            background: #007BFF;
+            color: white;
+        }
+        .container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #bus {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100px;
+            transition: transform 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bus Route</h1>
+    </div>
+    <div class="main-content" style="display: flex; flex: 1; width: 100%;">
+        <div class="sidebar">
+            <h2>Haltes</h2>
+            <ul id="stopList">
+                <li>Station</li>
+                <li>Sporthal</li>
+                <li>Centrum</li>
+                <li>Gildeopleidingen</li>
+            </ul>
+        </div>
+        <div class="container">
+            <img id="bus" src="bus.jpg" alt="Bus">
+        </div>
+    </div>
+    <audio id="busSound" src="bus-arrival-71991.mp3"></audio>
+
+    <script src="Platina.Simualtie.JS"></script>
+</body>
+</html>
